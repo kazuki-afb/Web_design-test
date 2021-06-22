@@ -1,0 +1,71 @@
+.body {
+  margin: 0;
+}
+
+.body .header {
+  height: 140px;
+  width: 100vw;
+  background-color: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body .header .left_container {
+  height: 140px;
+  width: 200px;
+  background-color: gray;
+}
+
+.body .header .left_container .left_box {
+  height: 50%;
+  width: auto;
+  background-color: lightgray;
+}
+
+.body .header .right_container {
+  height: 100%;
+  width: calc(100% - 200px);
+  background-color: brown;
+}
+
+.body .header .right_container .right_box {
+  height: 50%;
+  width: auto;
+  background-color: lightgray;
+}
+
+.body .header .right_container .right_box .menu {
+  height: 100%;
+  width: auto;
+}
+
+.body .header .right_container .right_box .menu ul {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.body .header .right_container .right_box .menu ul li {
+  display: inline-block;
+  width: calc(100%/6);
+  line-height: 70px;
+  text-align: center;
+}
+
+.body .header .right_container .right_box .menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.body .header .right_container .right_box .menu ul :hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=style.css.map */
