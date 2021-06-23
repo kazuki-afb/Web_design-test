@@ -31,8 +31,35 @@
 
 .body .header .right_container .right_box {
   height: 50%;
-  width: auto;
+  width: 100%;
   background-color: lightgray;
+}
+
+.body .header .right_container .right_box .catchcopy {
+  height: 100%;
+  width: calc(100% - 200px);
+  background-color: brown;
+  float: left;
+}
+
+.body .header .right_container .right_box .catchcopy h2 {
+  padding-left: 20px;
+  margin: 0;
+  line-height: 70px;
+}
+
+.body .header .right_container .right_box .phone_number {
+  height: 100%;
+  width: 200px;
+  background-color: brown;
+  float: right;
+}
+
+.body .header .right_container .right_box .phone_number h2 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 70px;
 }
 
 .body .header .right_container .right_box .menu {
@@ -54,6 +81,8 @@
 }
 
 .body .header .right_container .right_box .menu ul li a {
+  display: inline-block;
+  width: 100%;
   text-decoration: none;
   color: black;
 }
