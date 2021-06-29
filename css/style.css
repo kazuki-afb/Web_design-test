@@ -4,7 +4,7 @@
 
 .body .header {
   height: 140px;
-  width: 100vw;
+  width: 100%;
   background-color: lightgray;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,9 +92,175 @@
   cursor: pointer;
 }
 
+.body .main {
+  width: auto;
+  background-image: url(../img/keith-misner-h0Vxgz5tyXA-unsplash.jpg);
+  background-color: rgba(255, 255, 255, 0.7);
+  background-blend-mode: lighten;
+}
+
+.body .main .top {
+  background-color: lightgray;
+}
+
+.body .main .top .top_image {
+  width: 100%;
+}
+
+.body .main .main_container {
+  height: 3000px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.body .main .main_container .container {
+  padding-top: 20px;
+}
+
+.body .main .main_container .container .container_header {
+  padding: 10px 0;
+  background-color: gray;
+  text-align: center;
+}
+
+.body .main .main_container .container .container1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.body .main .main_container .container .container1 .container1_box {
+  height: 500px;
+  width: 300px;
+  background-color: brown;
+}
+
+.body .main .main_container .container .container1 .container1_box .container1_img {
+  height: 300px;
+  width: 300px;
+}
+
+.body .main .main_container .container .container1 .container1_box .container1_text {
+  height: 200px;
+  width: 300px;
+  background-color: gray;
+}
+
+.body .main .main_container .container .container2 .container2_box1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body .main .main_container .container .container2 .container2_box1 .container2_box1-img {
+  height: 300px;
+  width: 40%;
+  background-color: brown;
+}
+
+.body .main .main_container .container .container2 .container2_box1 .container2_box1-text {
+  width: 60%;
+  background-color: gray;
+}
+
+.body .main .main_container .container .container2 .container2_box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body .main .main_container .container .container2 .container2_box2 .container2_box2-text {
+  width: 60%;
+  background-color: gray;
+}
+
+.body .main .main_container .container .container2 .container2_box2 .container2_box2-movie {
+  width: 40%;
+  background-color: brown;
+}
+
+.body .main .main_container .container .container3 .container3-img {
+  height: 300px;
+  width: 50%;
+  float: left;
+  background-color: brown;
+}
+
+.body .main .main_container .container .container3 .container3-text {
+  height: 600px;
+  width: 100%;
+  background-color: gray;
+}
+
+.body .main .main_container .container .container4 .container4_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body .main .main_container .container .container4 .container4_box .dating {
+  width: 50%;
+  text-align: end;
+  padding-right: 20px;
+}
+
+.body .main .main_container .container .container4 .container4_box .comment {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.body .main .main_container .container .container5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body .main .main_container .container .container5 .container5-text {
+  height: 300px;
+  width: 50%;
+  background-color: gray;
+}
+
+.body .main .main_container .container .container5 .container5-map {
+  width: 50%;
+  background-color: brown;
+}
+
+.body .main .main_container .container .container6 .container6_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: end;
+  padding: 10px;
+}
+
+.body .main .main_container .container .container6 .container6_box label {
+  display: inline-block;
+  width: 20%;
+  margin-right: 40px;
+  padding: 10px 0;
+}
+
+.body .main .main_container .container .container6 .container6_box .form {
+  display: inline-block;
+  width: 30%;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+img {
+  vertical-align: bottom;
 }
 /*# sourceMappingURL=style.css.map */
