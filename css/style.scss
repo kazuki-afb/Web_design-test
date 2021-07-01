@@ -112,6 +112,8 @@ $font_color: black;
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
+          padding: 5px;
+          background-color: rgba($color: $main_color, $alpha: 0.7);
           .container1_box {
             height: 500px;
             width: 300px;
@@ -128,6 +130,8 @@ $font_color: black;
           }
         }
         .container2 {
+          padding: 5px;
+          background-color: rgba($color: $main_color, $alpha: 0.7);
           .container2_box1 {
             display: flex;
             .container2_box1-img {
@@ -154,7 +158,8 @@ $font_color: black;
           }
         }
         .container3 {
-          // width: 100%;
+          padding: 5px;
+          background-color: rgba($color: $main_color, $alpha: 0.7);
           .container3-img {
             height: 300px;
             width: 50%;
@@ -168,6 +173,8 @@ $font_color: black;
           }
         }
         .container4 {
+          padding: 5px;
+          background-color: rgba($color: $main_color, $alpha: 0.7);
           .container4_box {
             display: flex;
             .dating {
@@ -183,6 +190,8 @@ $font_color: black;
         }
         .container5 {
           display: flex;
+          padding: 5px;
+          background-color: rgba($color: $main_color, $alpha: 0.7);
           .container5-text {
             height: 300px;
             width: 50%;
@@ -194,7 +203,8 @@ $font_color: black;
           }
         }
         .container6 {
-          // text-align: center;
+          padding: 5px;
+          background-color: rgba($color: $main_color, $alpha: 0.7);
           .container6_box {
             display: flex;
             justify-content: center;
@@ -210,6 +220,16 @@ $font_color: black;
             .form {
               display: inline-block;
               width: 30%;
+            }
+            .button {
+              width: 150px;
+              padding: 10px 0;
+              background-color: $sub_color;
+              border-radius: 50px;
+              &:hover{
+                cursor: pointer;
+                background-color: $main_color;
+              }  
             }
           }
         }

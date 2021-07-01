@@ -132,6 +132,8 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 5px;
+  background-color: rgba(211, 211, 211, 0.7);
 }
 
 .body .main .main_container .container .container1 .container1_box {
@@ -149,6 +151,11 @@
   height: 200px;
   width: 300px;
   background-color: gray;
+}
+
+.body .main .main_container .container .container2 {
+  padding: 5px;
+  background-color: rgba(211, 211, 211, 0.7);
 }
 
 .body .main .main_container .container .container2 .container2_box1 {
@@ -184,6 +191,11 @@
   background-color: brown;
 }
 
+.body .main .main_container .container .container3 {
+  padding: 5px;
+  background-color: rgba(211, 211, 211, 0.7);
+}
+
 .body .main .main_container .container .container3 .container3-img {
   height: 300px;
   width: 50%;
@@ -195,6 +207,11 @@
   height: 600px;
   width: 100%;
   background-color: gray;
+}
+
+.body .main .main_container .container .container4 {
+  padding: 5px;
+  background-color: rgba(211, 211, 211, 0.7);
 }
 
 .body .main .main_container .container .container4 .container4_box {
@@ -218,6 +235,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 5px;
+  background-color: rgba(211, 211, 211, 0.7);
 }
 
 .body .main .main_container .container .container5 .container5-text {
@@ -229,6 +248,11 @@
 .body .main .main_container .container .container5 .container5-map {
   width: 50%;
   background-color: brown;
+}
+
+.body .main .main_container .container .container6 {
+  padding: 5px;
+  background-color: rgba(211, 211, 211, 0.7);
 }
 
 .body .main .main_container .container .container6 .container6_box {
@@ -252,6 +276,18 @@
 .body .main .main_container .container .container6 .container6_box .form {
   display: inline-block;
   width: 30%;
+}
+
+.body .main .main_container .container .container6 .container6_box .button {
+  width: 150px;
+  padding: 10px 0;
+  background-color: gray;
+  border-radius: 50px;
+}
+
+.body .main .main_container .container .container6 .container6_box .button:hover {
+  cursor: pointer;
+  background-color: lightgray;
 }
 
 ul {
