@@ -1,7 +1,9 @@
 $main_color: lightgray;
 $sub_color: gray;
 $sub_color2: brown;
+$sub_color3: black;
 $font_color: black;
+$font_color2: white;
 
 .body {
   margin: 0;
@@ -68,7 +70,6 @@ $font_color: black;
               text-align: center;
               a {
                 display: inline-block;
-                // height: 100%;
                 width: 100%;
                 text-decoration: none;
                 color: $font_color;
@@ -140,7 +141,6 @@ $font_color: black;
               background-color: $sub_color2;
             }
             .container2_box1-text {
-              // height: 300px;
               width: 60%;
               background-color: $sub_color;
             }
@@ -209,7 +209,6 @@ $font_color: black;
             display: flex;
             justify-content: center;
             text-align: end;
-            // margin-top: 10px;
             padding: 10px;
             label {
               display: inline-block;
@@ -237,7 +236,7 @@ $font_color: black;
     }
   }
   .footer {
-    height: 70px;
+    height: 140px;
     width: 100%;
     background-color: $main_color;
     display: flex;
@@ -247,6 +246,7 @@ $font_color: black;
       .left_box {
         height: 70px;
         width: 200px;
+        padding: 35px 0;
         background-color: $main_color;
       }
     }
@@ -286,7 +286,12 @@ $font_color: black;
         }
       }
     }
-
+  }
+  .copy-right {
+    padding: 5px 0;
+    text-align: center;
+    background-color: $sub_color3;
+    color: $font_color2;
   }
 }
 
