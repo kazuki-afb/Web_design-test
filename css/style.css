@@ -291,7 +291,7 @@
 }
 
 .body .footer {
-  height: 70px;
+  height: 140px;
   width: 100%;
   background-color: lightgray;
   display: -webkit-box;
@@ -307,6 +307,7 @@
 .body .footer .left_container .left_box {
   height: 70px;
   width: 200px;
+  padding: 35px 0;
   background-color: lightgray;
 }
 
@@ -349,6 +350,13 @@
 .body .footer .right_container .right_box .menu ul :hover {
   background-color: gray;
   cursor: pointer;
+}
+
+.body .copy-right {
+  padding: 5px 0;
+  text-align: center;
+  background-color: black;
+  color: white;
 }
 
 ul {
