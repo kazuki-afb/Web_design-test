@@ -236,6 +236,58 @@ $font_color: black;
       }
     }
   }
+  .footer {
+    height: 70px;
+    width: 100%;
+    background-color: $main_color;
+    display: flex;
+    .left_container {
+      width: 200px;
+      background-color: $sub_color;
+      .left_box {
+        height: 70px;
+        width: 200px;
+        background-color: $main_color;
+      }
+    }
+    .right_container {
+      height: 100%;
+      width: calc(100% - 200px);
+      background-color: $sub_color2;
+      .right_box {
+        width: 100%;
+        background-color: $main_color;
+        .menu {
+          height: 100%;
+          width: auto;
+          ul {
+            height: 100%;
+            width: 100%;
+            display: block;
+            li {
+              display: inline-block;
+              width: calc(100%/6);
+              line-height: 70px;
+              text-align: center;
+              a {
+                display: inline-block;
+                width: 100%;
+                text-decoration: none;
+                color: $font_color;
+              }
+            }
+            & :hover {
+              background-color: $sub_color;
+              cursor: pointer; 
+            }
+
+          }
+
+        }
+      }
+    }
+
+  }
 }
 
 ul {
