@@ -1,182 +1,207 @@
-$main_color: lightgray;
-$sub_color: gray;
-$sub_color2: brown;
-$sub_color3: black;
-$font_color: black;
-$font_color2: white;
+$main_color: #4D4D4D;
+$sub_color: #eeeeee;
+$sub_color2: #FF3232;
+$font_color: #1A1A1A;
+$font_color2: #eeeeee;
+$container_padding: 10px;
+$text_padding: 5px;
+$border-radius_top: 5px 5px 0 0;
+$border-radius_bottom: 0 0 5px 5px;
 
 .body {
   margin: 0;
-  
+  color: $font_color;
+  background-image: url(../img/keith-misner-h0Vxgz5tyXA-unsplash.jpg);
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
+  background-blend-mode: lighten;
   .header {
-    height: 140px;
+    height: 80px;
     width: 100%;
-    background-color: $main_color;
-    display: flex;
-    .left_container {
-      height: 140px;
-      width: 200px;
-      background-color: $sub_color;
-      .left_box {
-        height: 50%;
-        width: auto;
-        background-color: $main_color;
-      }
-    }
-    .right_container {
-      height: 100%;
-      width: calc(100% - 200px);
-      background-color: $sub_color2;
-      .right_box {
-        height: 50%;
-        width: 100%;
-        background-color: $main_color;
-        .catchcopy {
-          height: 100%;
-          width: calc(100% - 200px);
-          background-color: $sub_color2;
-          float: left;
-          h2 {
-            padding-left: 20px;
-            margin: 0;
-            line-height: 70px;
-          }
-
-        }
-        .phone_number{
-          height: 100%;
-          width: 200px;
-          background-color: $sub_color2;
-          float: right;
-          
-          h2 {
-            margin: 0;
-            font-size: 1rem;
-            text-align: center;
-            line-height: 70px;
-          }
-        }
-        .menu {
-          height: 100%;
+    background-color: rgba($color: $main_color, $alpha: 0.6) ;
+    position: absolute;
+    .header_container {
+      display: flex;
+      height: 80px;
+      width: 100%;
+      .left_container {
+        height: 100px;
+        width: 200px;
+        .left_box {
+          height: 50%;
           width: auto;
-          ul {
+          .logo_image {
+            height: 70px;
+            width: 200px;
+          }
+        }
+      }
+      .right_container {
+        height: 100%;
+        width: calc(100% - 200px);
+        .right_box {
+          height: 50%;
+          width: 100%;
+          .catchcopy {
             height: 100%;
-            width: 100%;
-            display: block;
-            li {
-              display: inline-block;
-              width: calc(100%/6);
-              line-height: 70px;
+            width: calc(100% - 205px);
+            float: left;
+            font-size: 0.9rem;
+            line-height: 72px;
+            padding-left: 5px;
+          }
+          .phone_number{
+            height: 100%;
+            width: 200px;
+            float: right;
+            
+            h2 {
+              margin: 0;
+              font-size: 1rem;
               text-align: center;
-              a {
-                display: inline-block;
-                width: 100%;
-                text-decoration: none;
-                color: $font_color;
+              line-height: 70px;
+              &:hover {
+                cursor: pointer;
+                color: $font_color2;
               }
             }
-            & :hover {
-              background-color: $sub_color;
-              cursor: pointer; 
-            }
-
           }
+          .menu {
+            width: calc(100% - 180px);
+            ul {
+              width: 100%;
+              display: block;
+              display: flex;
+              justify-content: flex-end;
+              li {
+                display: inline-block;
+                width: calc(100%/8);
+                line-height: 50px;
+                text-align: center;
+                a {
+                  display: inline-block;
+                  width: 100%;
+                  text-decoration: none;
+                  font-weight: bold;
+                  color: $font_color;
+                }
+              }
+              & :hover {
+                color: $font_color2;
+                cursor: pointer; 
+              }
 
+            }
+          }
         }
       }
     }
   }
   .main {
     width: auto;
-    background-image: url(../img/keith-misner-h0Vxgz5tyXA-unsplash.jpg);
-    background-color: rgba($color: #ffffff, $alpha: 0.7);
-    background-blend-mode: lighten;
-
+    padding-bottom: 20px;
     .top {
-      background-color: $main_color;
       .top_image {
         width: 100%;
       }
     }
     .main_container {
-      height: 3000px;
       width: 85%;
       margin: 0 auto;
       .container {
         padding-top: 20px;
         .container_header {
           padding: 10px 0;
-          background-color: $sub_color;
+          background-color: rgba($color: $main_color, $alpha: 0.6) ;
           text-align: center;
+          border-radius : $border-radius_top;
+          color: $font_color2;
+          font-weight: bold;
         }
         .container1 {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-          padding: 5px;
-          background-color: rgba($color: $main_color, $alpha: 0.7);
+          padding: $container_padding;
+          background-color: rgba($color: $sub_color, $alpha: 0.4) ;
+          border-radius: $border-radius_bottom;
           .container1_box {
-            height: 500px;
             width: 300px;
-            background-color: $sub_color2;
             .container1_img {
               height: 300px;
               width: 300px;
             }
             .container1_text {
               height: 200px;
-              width: 300px;
-              background-color: $sub_color;
+              width: 290px;
+              padding: $text_padding;
+              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             }
           }
         }
         .container2 {
-          padding: 5px;
-          background-color: rgba($color: $main_color, $alpha: 0.7);
+          padding: $container_padding;
+          background-color: rgba($color: $sub_color, $alpha: 0.4) ;
+          border-radius: $border-radius_bottom;
           .container2_box1 {
             display: flex;
             .container2_box1-img {
-              height: 300px;
               width: 40%;
-              background-color: $sub_color2;
             }
             .container2_box1-text {
               width: 60%;
-              background-color: $sub_color;
+              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+              padding: $text_padding;
             }
           }
           .container2_box2 {
             display: flex;
             .container2_box2-text {
               width: 60%;
-              background-color: $sub_color;
+              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+              padding: $text_padding;
             }
-            .container2_box2-movie {
+            .container2_box2-movie{
               width: 40%;
-              background-color: $sub_color2;
+              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+              .youtube {
+                width: 100%;
+                overflow: hidden;
+                padding-bottom: 56.25%;
+                position: relative;
+                .iframe {
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  border: none;
+                }
+              }
             }
           }
         }
         .container3 {
-          padding: 5px;
-          background-color: rgba($color: $main_color, $alpha: 0.7);
+          padding: $container_padding;
+          background-color: rgba($color: $sub_color, $alpha: 0.4) ;
+          border-radius: $border-radius_bottom;
           .container3-img {
             height: 300px;
             width: 50%;
             float: left;
-            background-color: $sub_color2;
           }
           .container3-text {
             height: 600px;
             width: 100%;
-            background-color: $sub_color;
+            background-color: rgba($color: $sub_color, $alpha: 0.7) ;
           }
         }
         .container4 {
-          padding: 5px;
-          background-color: rgba($color: $main_color, $alpha: 0.7);
+          padding: $container_padding;
+          background-color: rgba($color: $sub_color, $alpha: 0.4) ;
+          border-radius: $border-radius_bottom;
           .container4_box {
             display: flex;
+            background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             .dating {
               width: 50%;
               text-align: end;
@@ -190,26 +215,49 @@ $font_color2: white;
         }
         .container5 {
           display: flex;
-          padding: 5px;
-          background-color: rgba($color: $main_color, $alpha: 0.7);
+          padding: $container_padding;
+          background-color: rgba($color: $sub_color, $alpha: 0.4) ;
+          border-radius: $border-radius_bottom;
           .container5-text {
             height: 300px;
             width: 50%;
-            background-color: $sub_color;
+            background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+            padding-top: 80px;
+            .company {
+              font-size: 1.3rem;
+              font-weight: bold;
+              width: 50%;
+              margin: 20px auto;
+            }
+            .postal_code {
+              font-size: 0.5rem;
+              width: 50%;
+              margin: 20px auto;
+              margin-bottom: 0;
+            }
+            .address {
+              width: 50%;
+              margin: 5px auto;
+            }
+            .phone_nummber2 {
+              width: 50%;
+              margin: 20px auto;
+            }
           }
           .container5-map {
             width: 50%;
-            background-color: $sub_color2;
           }
         }
         .container6 {
-          padding: 5px;
-          background-color: rgba($color: $main_color, $alpha: 0.7);
+          padding: $container_padding;
+          background-color: rgba($color: $sub_color, $alpha: 0.4) ;
+          border-radius: $border-radius_bottom;
           .container6_box {
             display: flex;
             justify-content: center;
             text-align: end;
             padding: 10px;
+            background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             label {
               display: inline-block;
               width: 20%;
@@ -238,35 +286,36 @@ $font_color2: white;
   .footer {
     height: 140px;
     width: 100%;
-    background-color: $main_color;
+    background-color: rgba($color: $main_color, $alpha: 0.6) ;
     display: flex;
     .left_container {
       width: 200px;
-      background-color: $sub_color;
       .left_box {
         height: 70px;
         width: 200px;
         padding: 35px 0;
-        background-color: $main_color;
+        .logo_image {
+          height: 70px;
+          width: 200px;
+        }
       }
     }
     .right_container {
       height: 100%;
       width: calc(100% - 200px);
-      background-color: $sub_color2;
       .right_box {
         width: 100%;
-        background-color: $main_color;
         .menu {
           height: 100%;
           width: auto;
           ul {
             height: 100%;
-            width: 100%;
+            width: 81%;
             display: block;
+            margin: 0 auto;
             li {
               display: inline-block;
-              width: calc(100%/6);
+              width: calc(100%/5);
               line-height: 70px;
               text-align: center;
               a {
@@ -274,10 +323,11 @@ $font_color2: white;
                 width: 100%;
                 text-decoration: none;
                 color: $font_color;
+                font-weight: bold;
               }
             }
             & :hover {
-              background-color: $sub_color;
+              color: $sub_color;
               cursor: pointer; 
             }
 
