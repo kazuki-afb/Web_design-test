@@ -1,95 +1,99 @@
 $main_color: #4D4D4D;
 $sub_color: #eeeeee;
 $sub_color2: #FF3232;
+$sub_color3: #1A1A1A;
 $font_color: #1A1A1A;
 $font_color2: #eeeeee;
 $container_padding: 10px;
 $text_padding: 5px;
 $border-radius_top: 5px 5px 0 0;
 $border-radius_bottom: 0 0 5px 5px;
-
+html {
+  font-size: 1vw;
+  color: $font_color;
+}
 .body {
   margin: 0;
   color: $font_color;
-  background-image: url(./img/keith-misner-h0Vxgz5tyXA-unsplash.jpg);
+  background-image: url(../img/keith-misner-h0Vxgz5tyXA-unsplash.jpg);
   background-color: rgba($color: #ffffff, $alpha: 0.7);
   background-blend-mode: lighten;
+  font-size: 1.2rem;
   .header {
-    height: 80px;
     width: 100%;
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     position: absolute;
+    aspect-ratio: 100/1;
     .header_container {
       display: flex;
-      height: 80px;
       width: 100%;
       .left_container {
-        height: 100px;
-        width: 200px;
+        width: 12%;
         .left_box {
-          height: 50%;
-          width: auto;
+          padding-left: 1rem;
           .logo_image {
-            height: 70px;
-            width: 200px;
+            width: 100%;
+            line-height: 4rem;
+            aspect-ratio: 200/70;
           }
         }
       }
       .right_container {
-        height: 100%;
-        width: calc(100% - 200px);
-        .right_box {
-          height: 50%;
+        width: 88%;
+        .right_box-top {
           width: 100%;
+          aspect-ratio: 1689.59/73.64;
+          display: flex;
+          justify-content: space-between;
           .catchcopy {
-            height: 100%;
-            width: calc(100% - 205px);
-            float: left;
-            font-size: 0.9rem;
-            line-height: 72px;
-            padding-left: 5px;
+            font-size: 1rem;
+            line-height: 4rem;
+            padding-left: 10px;
           }
           .phone_number{
-            height: 100%;
-            width: 200px;
-            float: right;
-            
+            padding-right: 20px;
+            line-height: 4rem;
             h2 {
               margin: 0;
-              font-size: 1rem;
+              font-size: 1.5rem;
               text-align: center;
-              line-height: 70px;
+              margin-bottom: 0.15rem;
               &:hover {
                 cursor: pointer;
                 color: $font_color2;
+                font-size: 1.6rem;
+                margin-bottom: 0;
               }
             }
           }
+        }
+        .right_box-bottom {
+          width: 100%;
+          padding-top: 5px;
           .menu {
-            width: calc(100% - 180px);
+            padding-right: 15%;
             ul {
               width: 100%;
-              display: block;
               display: flex;
               justify-content: flex-end;
               li {
-                display: inline-block;
-                width: calc(100%/8);
-                line-height: 50px;
+                width: 10rem;
                 text-align: center;
+                padding-bottom: 0.2rem;
+
                 a {
-                  display: inline-block;
-                  width: 100%;
                   text-decoration: none;
                   font-weight: bold;
                   color: $font_color;
+                  font-size: 1.4rem;
                 }
               }
               & :hover {
                 color: $font_color2;
-                cursor: pointer; 
+                cursor: pointer;
+                font-size: 1.5rem;
+                padding-bottom: 0;
               }
-
             }
           }
         }
@@ -107,6 +111,7 @@ $border-radius_bottom: 0 0 5px 5px;
     .main_container {
       width: 85%;
       margin: 0 auto;
+      min-width: 310px;
       .container {
         padding-top: 20px;
         .container_header {
@@ -116,25 +121,27 @@ $border-radius_bottom: 0 0 5px 5px;
           border-radius : $border-radius_top;
           color: $font_color2;
           font-weight: bold;
+          font-size: 2rem;
         }
         .container1 {
           display: flex;
-          justify-content: space-between;
           flex-wrap: wrap;
+          justify-content: space-around;
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
           .container1_box {
             width: 300px;
+            margin-top: $text_padding;
+            background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             .container1_img {
               height: 300px;
               width: 300px;
             }
             .container1_text {
-              height: 200px;
               width: 290px;
               padding: $text_padding;
-              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+              font-size: 0.9rem;
             }
           }
         }
@@ -166,7 +173,7 @@ $border-radius_bottom: 0 0 5px 5px;
               .youtube {
                 width: 100%;
                 overflow: hidden;
-                padding-bottom: 56.25%;
+                aspect-ratio: 16/9;
                 position: relative;
                 .iframe {
                   height: 100%;
@@ -185,12 +192,10 @@ $border-radius_bottom: 0 0 5px 5px;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
           .container3-img {
-            height: 300px;
             width: 50%;
             float: left;
           }
           .container3-text {
-            height: 600px;
             width: 100%;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
           }
@@ -200,16 +205,22 @@ $border-radius_bottom: 0 0 5px 5px;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
           .container4_box {
-            display: flex;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
-            .dating {
-              width: 50%;
-              text-align: end;
-              padding-right: 20px;
-            }
-            .comment {
-              width: 50%;
-              padding-left: 20px;
+            padding: 2rem 0;
+            .container4_box-li{
+            display: flex;
+            justify-content: center;
+              .dating {
+                width: 25%;
+                text-align: end;
+                padding-right: 20px;
+                font-size: 1.5rem;
+              }
+              .comment {
+                width: 25%;
+                padding-left: 20px;
+                font-size: 1.5rem;
+              }
             }
           }
         }
@@ -219,29 +230,32 @@ $border-radius_bottom: 0 0 5px 5px;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
           .container5-text {
-            height: 300px;
             width: 50%;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
-            padding-top: 80px;
+            padding: 4rem 0;
             .company {
-              font-size: 1.3rem;
+              font-size: 3rem;
               font-weight: bold;
-              width: 50%;
-              margin: 20px auto;
+              text-align: center;
+              margin: 1.3rem 0;
             }
             .postal_code {
-              font-size: 0.5rem;
+              font-size: 0.8rem;
               width: 50%;
-              margin: 20px auto;
-              margin-bottom: 0;
+              margin: 0.5rem auto;
+              padding-left: 2rem;
             }
             .address {
+              font-size: 1.3rem;
               width: 50%;
-              margin: 5px auto;
+              margin: 0.5rem auto;
+              padding-left: 2rem;
             }
             .phone_nummber2 {
+              font-size: 1.3rem;
               width: 50%;
-              margin: 20px auto;
+              margin: 0.5rem auto;
+              padding-left: 2rem;
             }
           }
           .container5-map {
@@ -259,18 +273,16 @@ $border-radius_bottom: 0 0 5px 5px;
             padding: 10px;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             label {
-              display: inline-block;
               width: 20%;
               margin-right: 40px;
-              padding: 10px 0;
+              padding: 0.8rem 0;
             }
             .form {
-              display: inline-block;
               width: 30%;
             }
             .button {
               width: 150px;
-              padding: 10px 0;
+              padding: 0.8rem 0;
               background-color: $sub_color;
               border-radius: 50px;
               &:hover{
@@ -284,51 +296,54 @@ $border-radius_bottom: 0 0 5px 5px;
     }
   }
   .footer {
-    height: 140px;
     width: 100%;
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     display: flex;
+    aspect-ratio: 1920/140;
     .left_container {
-      width: 200px;
+      width: 12%;
       .left_box {
-        height: 70px;
-        width: 200px;
-        padding: 35px 0;
+        width: 100%;
+        padding-left: 1rem;
+        aspect-ratio: 230.39/140;
+        line-height: 6rem;
         .logo_image {
-          height: 70px;
-          width: 200px;
+          width: 100%;
+          aspect-ratio: 200/70;
         }
       }
     }
     .right_container {
-      height: 100%;
-      width: calc(100% - 200px);
+      width: 88%;
       .right_box {
         width: 100%;
+        aspect-ratio: 1689.59/140;
         .menu {
           height: 100%;
           width: auto;
           ul {
-            height: 100%;
             width: 81%;
             display: block;
             margin: 0 auto;
             li {
               display: inline-block;
-              width: calc(100%/5);
-              line-height: 70px;
+              width: 15rem;
               text-align: center;
+              aspect-ratio: 288/70;
+              font-size: 1.4rem;
               a {
-                display: inline-block;
-                width: 100%;
+                line-height: 3rem;
+
                 text-decoration: none;
                 color: $font_color;
                 font-weight: bold;
+                font-size: 1.4rem;
               }
             }
             & :hover {
               color: $sub_color;
-              cursor: pointer; 
+              cursor: pointer;
+              font-size: 1.5rem;
             }
 
           }
@@ -345,6 +360,9 @@ $border-radius_bottom: 0 0 5px 5px;
   }
 }
 
+p{
+  margin: 0;
+}
 ul {
   list-style: none;
   margin: 0;
