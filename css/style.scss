@@ -8,6 +8,14 @@ $container_padding: 10px;
 $text_padding: 5px;
 $border-radius_top: 5px 5px 0 0;
 $border-radius_bottom: 0 0 5px 5px;
+$media-sp: 896px;
+
+@mixin sp {
+  @media only screen and (max-width: $media-sp) {
+    @content;
+  }
+}
+
 html {
   font-size: 1vw;
   color: $font_color;
@@ -19,22 +27,30 @@ html {
   background-color: rgba($color: #ffffff, $alpha: 0.7);
   background-blend-mode: lighten;
   font-size: 1.2rem;
+  // min-width: 460px;
   .header {
     width: 100%;
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     position: absolute;
     aspect-ratio: 100/1;
+    min-width: 460px;
     .header_container {
       display: flex;
       width: 100%;
       .left_container {
         width: 12%;
+        @include sp {
+          width: 24%;
+        }
         .left_box {
           padding-left: 1rem;
           .logo_image {
             width: 100%;
             line-height: 4rem;
             aspect-ratio: 200/70;
+            @include sp {
+              line-height: 8rem;
+            }
           }
         }
       }
@@ -49,6 +65,10 @@ html {
             font-size: 1rem;
             line-height: 4rem;
             padding-left: 10px;
+            @include sp {
+              font-size: 2rem;
+              line-height: 7.6rem;
+            }
           }
           .phone_number{
             padding-right: 20px;
@@ -58,6 +78,9 @@ html {
               font-size: 1.5rem;
               text-align: center;
               margin-bottom: 0.15rem;
+              @include sp {
+                display: none;
+              }
               &:hover {
                 cursor: pointer;
                 color: $font_color2;
@@ -70,6 +93,9 @@ html {
         .right_box-bottom {
           width: 100%;
           padding-top: 5px;
+          @include sp{
+            display: none;
+          }
           .menu {
             padding-right: 15%;
             ul {
@@ -111,7 +137,7 @@ html {
     .main_container {
       width: 85%;
       margin: 0 auto;
-      min-width: 310px;
+      min-width: 460px;
       .container {
         padding-top: 20px;
         .container_header {
@@ -131,15 +157,15 @@ html {
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
           .container1_box {
-            width: 300px;
+            width: 371px;
             margin-top: $text_padding;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             .container1_img {
-              height: 300px;
-              width: 300px;
+              height: 371px;
+              width: 371px;
             }
             .container1_text {
-              width: 290px;
+              width: 361px;
               padding: $text_padding;
               font-size: 0.9rem;
             }
@@ -162,14 +188,26 @@ html {
           }
           .container2_box2 {
             display: flex;
+            background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+
+            @include sp{
+              flex-direction: column-reverse;
+
+            }
             .container2_box2-text {
               width: 60%;
-              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+              // background-color: rgba($color: $sub_color, $alpha: 0.7) ;
               padding: $text_padding;
+              @include sp {
+                width: 100%;
+              }
             }
             .container2_box2-movie{
               width: 40%;
-              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+              @include sp {
+                width: 100%;
+                padding-top: 4rem;
+              }
               .youtube {
                 width: 100%;
                 overflow: hidden;
@@ -211,13 +249,13 @@ html {
             display: flex;
             justify-content: center;
               .dating {
-                width: 25%;
+                width: 35%;
                 text-align: end;
                 padding-right: 20px;
                 font-size: 1.5rem;
               }
               .comment {
-                width: 25%;
+                width: 35%;
                 padding-left: 20px;
                 font-size: 1.5rem;
               }
@@ -229,43 +267,92 @@ html {
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
+          @include sp {
+            flex-direction: column-reverse;
+          }
           .container5-text {
             width: 50%;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             padding: 4rem 0;
+            @include sp {
+              width: 100%;
+            }
             .company {
               font-size: 3rem;
               font-weight: bold;
               text-align: center;
               margin: 1.3rem 0;
+              @include sp {
+                width: 50%;
+                float: left;
+                padding-top: 1rem;
+                display: block;
+              }
             }
             .postal_code {
               font-size: 0.8rem;
               width: 50%;
               margin: 0.5rem auto;
               padding-left: 2rem;
+              @include sp{
+                float: right;
+                display: block;
+                padding-left: 4rem;
+                width: calc(50% - 4rem);
+              }
             }
             .address {
               font-size: 1.3rem;
               width: 50%;
               margin: 0.5rem auto;
               padding-left: 2rem;
+              @include sp{
+                float: right;
+                display: block;
+                padding-left: 4rem;
+                width: calc(50% - 4rem);
+              }
             }
             .phone_nummber2 {
               font-size: 1.3rem;
               width: 50%;
               margin: 0.5rem auto;
               padding-left: 2rem;
+              @include sp{
+                float: right;
+                display: block;
+                padding-left: 4rem;
+                width: calc(50% - 4rem);
+              }
             }
           }
           .container5-map {
             width: 50%;
+            @include sp {
+              width: 100%;
+              aspect-ratio: 3/2;
+            }
+          }
+        }
+        .container6_header {
+          padding: 10px 0;
+          background-color: rgba($color: $main_color, $alpha: 0.6) ;
+          text-align: center;
+          border-radius : $border-radius_top;
+          color: $font_color2;
+          font-weight: bold;
+          font-size: 2rem;
+          @include sp{
+            display: none;
           }
         }
         .container6 {
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
+          @include sp {
+            display: none;
+          }
           .container6_box {
             display: flex;
             justify-content: center;
@@ -300,13 +387,25 @@ html {
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     display: flex;
     aspect-ratio: 1920/140;
+    min-width: 460px;
+    @include sp {
+      aspect-ratio: 1920/550;
+    }
     .left_container {
       width: 12%;
+      @include sp{
+        width: 24%;
+      }
       .left_box {
         width: 100%;
         padding-left: 1rem;
         aspect-ratio: 230.39/140;
         line-height: 6rem;
+        @include sp {
+          aspect-ratio: 230.39/240;
+          line-height: 20rem;
+        }
+
         .logo_image {
           width: 100%;
           aspect-ratio: 200/70;
@@ -315,37 +414,60 @@ html {
     }
     .right_container {
       width: 88%;
+      @include sp {
+        width: 76%;
+      }
       .right_box {
         width: 100%;
         aspect-ratio: 1689.59/140;
+        @include sp {
+          aspect-ratio: 1689.59/550;
+        }
         .menu {
           height: 100%;
           width: auto;
           ul {
             width: 81%;
-            display: block;
             margin: 0 auto;
+            @include sp {
+              width: 66%;
+              margin: 2rem 0 0 0;
+            }
             li {
               display: inline-block;
               width: 15rem;
               text-align: center;
               aspect-ratio: 288/70;
               font-size: 1.4rem;
+              @include sp {
+                display: block;
+                margin: 0 auto;
+                font-size: 2.2rem;
+              }
               a {
                 line-height: 3rem;
-
                 text-decoration: none;
                 color: $font_color;
                 font-weight: bold;
                 font-size: 1.4rem;
+                @include sp {
+                  font-size: 2rem;
+                }
               }
             }
             & :hover {
               color: $sub_color;
               cursor: pointer;
               font-size: 1.5rem;
+              @include sp{
+                font-size: 2.2rem;
+              }
             }
-
+            .sp_none {
+              @include sp {
+                display: none;
+              }
+            }
           }
 
         }
@@ -357,6 +479,7 @@ html {
     text-align: center;
     background-color: $sub_color3;
     color: $font_color2;
+    min-width: 460px;
   }
 }
 
