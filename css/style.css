@@ -154,6 +154,7 @@ html {
 .body .main {
   width: auto;
   padding-bottom: 20px;
+  min-width: 460px;
 }
 
 .body .main .top .top_image {
@@ -210,6 +211,12 @@ html {
   font-size: 0.9rem;
 }
 
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container1 .container1_box .container1_text {
+    font-size: 1.5rem;
+  }
+}
+
 .body .main .main_container .container .container2 {
   padding: 10px;
   background-color: rgba(238, 238, 238, 0.4);
@@ -230,6 +237,12 @@ html {
   width: 60%;
   background-color: rgba(238, 238, 238, 0.7);
   padding: 5px;
+}
+
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container2 .container2_box1 .container2_box1-text {
+    font-size: 1.5rem;
+  }
 }
 
 .body .main .main_container .container .container2 .container2_box2 {
@@ -256,6 +269,7 @@ html {
 @media only screen and (max-width: 896px) {
   .body .main .main_container .container .container2 .container2_box2 .container2_box2-text {
     width: 100%;
+    font-size: 1.5rem;
   }
 }
 
@@ -302,6 +316,12 @@ html {
   background-color: rgba(238, 238, 238, 0.7);
 }
 
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container3 .container3-text {
+    font-size: 1.5rem;
+  }
+}
+
 .body .main .main_container .container .container4 {
   padding: 10px;
   background-color: rgba(238, 238, 238, 0.4);
@@ -329,10 +349,22 @@ html {
   font-size: 1.5rem;
 }
 
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container4 .container4_box .container4_box-li .dating {
+    font-size: 2.5rem;
+  }
+}
+
 .body .main .main_container .container .container4 .container4_box .container4_box-li .comment {
   width: 35%;
   padding-left: 20px;
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container4 .container4_box .container4_box-li .comment {
+    font-size: 2.5rem;
+  }
 }
 
 .body .main .main_container .container .container5 {
@@ -376,7 +408,7 @@ html {
   .body .main .main_container .container .container5 .container5-text .company {
     width: 50%;
     float: left;
-    padding-top: 1rem;
+    padding: 4rem 0;
     display: block;
   }
 }
@@ -394,6 +426,7 @@ html {
     display: block;
     padding-left: 4rem;
     width: calc(50% - 4rem);
+    font-size: 1.2rem;
   }
 }
 
@@ -410,6 +443,7 @@ html {
     display: block;
     padding-left: 4rem;
     width: calc(50% - 4rem);
+    font-size: 2rem;
   }
 }
 
@@ -426,6 +460,7 @@ html {
     display: block;
     padding-left: 4rem;
     width: calc(50% - 4rem);
+    font-size: 2rem;
   }
 }
 
