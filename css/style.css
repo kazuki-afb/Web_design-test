@@ -310,6 +310,7 @@ html {
 }
 
 .body .main .main_container .container .container2 .container2_box2 .container2_box2-movie .youtube {
+  width: 100%;
   overflow: hidden;
   aspect-ratio: 16/9;
   position: relative;
@@ -573,12 +574,6 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media only screen and (max-width: 896px) {
-  .body .footer {
-    vertical-align: middle;
-  }
 }
 
 .body .footer .left_container {

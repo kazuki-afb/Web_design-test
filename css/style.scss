@@ -230,6 +230,7 @@ html {
                 margin: 0 auto;
               }
               .youtube {
+                width: 100%;
                 overflow: hidden;
                 aspect-ratio: 16/9;
                 position: relative;
@@ -421,12 +422,6 @@ html {
     width: 100%;
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     display: flex;
-    // aspect-ratio: 1920/140;
-    @include sp {
-      // aspect-ratio: 1920/700;
-      vertical-align: middle;
-
-    }
     .left_container {
       width: 12%;
       @include sp{
@@ -436,13 +431,6 @@ html {
         width: calc(100% - 1rem);
         height: 100%;
         padding-left: 1rem;
-        // aspect-ratio: 230.39/140;
-        // line-height: 6rem;
-        @include sp {
-          // aspect-ratio: 230.39/240;
-          // line-height: 100%;
-        }
-
         .logo_image {
           width: 100%;
           aspect-ratio: 200/70;
