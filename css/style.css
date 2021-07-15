@@ -17,7 +17,6 @@ html {
   background-color: rgba(77, 77, 77, 0.6);
   position: absolute;
   aspect-ratio: 100/1;
-  min-width: 460px;
 }
 
 .body .header .header_container {
@@ -154,7 +153,6 @@ html {
 .body .main {
   width: auto;
   padding-bottom: 20px;
-  min-width: 460px;
 }
 
 .body .main .top .top_image {
@@ -164,11 +162,11 @@ html {
 .body .main .main_container {
   width: 85%;
   margin: 0 auto;
-  min-width: 460px;
 }
 
 .body .main .main_container .container {
   padding-top: 20px;
+  width: 100%;
 }
 
 .body .main .main_container .container .container_header {
@@ -194,19 +192,36 @@ html {
   border-radius: 0 0 5px 5px;
 }
 
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .body .main .main_container .container .container1 .container1_box {
-  width: 371px;
+  width: 80%;
   margin-top: 5px;
   background-color: rgba(238, 238, 238, 0.7);
+  max-width: 330px;
+}
+
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container1 .container1_box {
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 896px;
+  }
 }
 
 .body .main .main_container .container .container1 .container1_box .container1_img {
-  height: 371px;
-  width: 371px;
+  width: 100%;
+  aspect-ratio: 4/3;
 }
 
 .body .main .main_container .container .container1 .container1_box .container1_text {
-  width: 361px;
   padding: 5px;
   font-size: 0.9rem;
 }
@@ -227,21 +242,30 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: rgba(238, 238, 238, 0.7);
 }
 
 .body .main .main_container .container .container2 .container2_box1 .container2_box1-img {
-  width: 40%;
+  width: calc(40% - 5px);
+}
+
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container2 .container2_box1 .container2_box1-img {
+    width: calc(60% - 5px);
+    padding-left: 5px;
+    padding-top: 5px;
+  }
 }
 
 .body .main .main_container .container .container2 .container2_box1 .container2_box1-text {
   width: 60%;
-  background-color: rgba(238, 238, 238, 0.7);
   padding: 5px;
 }
 
 @media only screen and (max-width: 896px) {
   .body .main .main_container .container .container2 .container2_box1 .container2_box1-text {
     font-size: 1.5rem;
+    width: 40%;
   }
 }
 
@@ -268,7 +292,7 @@ html {
 
 @media only screen and (max-width: 896px) {
   .body .main .main_container .container .container2 .container2_box2 .container2_box2-text {
-    width: 100%;
+    width: calc(100% - 10px);
     font-size: 1.5rem;
   }
 }
@@ -279,21 +303,21 @@ html {
 
 @media only screen and (max-width: 896px) {
   .body .main .main_container .container .container2 .container2_box2 .container2_box2-movie {
-    width: 100%;
+    width: calc(100% - 10px);
     padding-top: 4rem;
+    margin: 0 auto;
   }
 }
 
 .body .main .main_container .container .container2 .container2_box2 .container2_box2-movie .youtube {
-  width: 100%;
   overflow: hidden;
   aspect-ratio: 16/9;
   position: relative;
 }
 
 .body .main .main_container .container .container2 .container2_box2 .container2_box2-movie .youtube .iframe {
-  height: 100%;
   width: 100%;
+  aspect-ratio: 16/9;
   position: absolute;
   top: 0;
   left: 0;
@@ -309,6 +333,12 @@ html {
 .body .main .main_container .container .container3 .container3-img {
   width: 50%;
   float: left;
+}
+
+@media only screen and (max-width: 896px) {
+  .body .main .main_container .container .container3 .container3-img {
+    width: 72%;
+  }
 }
 
 .body .main .main_container .container .container3 .container3-text {
@@ -544,12 +574,11 @@ html {
   display: -ms-flexbox;
   display: flex;
   aspect-ratio: 1920/140;
-  min-width: 460px;
 }
 
 @media only screen and (max-width: 896px) {
   .body .footer {
-    aspect-ratio: 1920/550;
+    aspect-ratio: 1920/700;
   }
 }
 
@@ -573,7 +602,7 @@ html {
 @media only screen and (max-width: 896px) {
   .body .footer .left_container .left_box {
     aspect-ratio: 230.39/240;
-    line-height: 20rem;
+    line-height: 22rem;
   }
 }
 
@@ -673,7 +702,6 @@ html {
   text-align: center;
   background-color: #1A1A1A;
   color: #eeeeee;
-  min-width: 460px;
 }
 
 p {

@@ -33,7 +33,6 @@ html {
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     position: absolute;
     aspect-ratio: 100/1;
-    min-width: 460px;
     .header_container {
       display: flex;
       width: 100%;
@@ -129,7 +128,6 @@ html {
   .main {
     width: auto;
     padding-bottom: 20px;
-    min-width: 460px;
     .top {
       .top_image {
         width: 100%;
@@ -138,9 +136,9 @@ html {
     .main_container {
       width: 85%;
       margin: 0 auto;
-      min-width: 460px;
       .container {
         padding-top: 20px;
+        width: 100%;
         .container_header {
           padding: 10px 0;
           background-color: rgba($color: $main_color, $alpha: 0.6) ;
@@ -157,16 +155,24 @@ html {
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
+          @include sp {
+            flex-direction: column;
+          }
           .container1_box {
-            width: 371px;
+            width: 80%;
             margin-top: $text_padding;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+            max-width: 330px;
+            @include sp {
+              margin: 0 auto;
+              margin-top: $text_padding;
+              max-width: 896px;
+            }
             .container1_img {
-              height: 371px;
-              width: 371px;
+              width: 100%;
+              aspect-ratio: 4/3;
             }
             .container1_text {
-              width: 361px;
               padding: $text_padding;
               font-size: 0.9rem;
               @include sp {
@@ -181,15 +187,22 @@ html {
           border-radius: $border-radius_bottom;
           .container2_box1 {
             display: flex;
+            background-color: rgba($color: $sub_color, $alpha: 0.7) ;
+
             .container2_box1-img {
-              width: 40%;
+              width: calc(40% - 5px);
+              @include sp {
+                width: calc(60% - 5px);
+                padding-left: $text_padding;
+                padding-top: $text_padding;
+              }
             }
             .container2_box1-text {
               width: 60%;
-              background-color: rgba($color: $sub_color, $alpha: 0.7) ;
               padding: $text_padding;
               @include sp {
                 font-size: 1.5rem;
+                width: 40%;
               }
             }
           }
@@ -205,24 +218,24 @@ html {
               width: 60%;
               padding: $text_padding;
               @include sp {
-                width: 100%;
+                width: calc(100% - 10px);
                 font-size: 1.5rem;
               }
             }
             .container2_box2-movie{
               width: 40%;
               @include sp {
-                width: 100%;
+                width: calc(100% - 10px);
                 padding-top: 4rem;
+                margin: 0 auto;
               }
               .youtube {
-                width: 100%;
                 overflow: hidden;
                 aspect-ratio: 16/9;
                 position: relative;
                 .iframe {
-                  height: 100%;
                   width: 100%;
+                  aspect-ratio: 16/9;
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -239,6 +252,9 @@ html {
           .container3-img {
             width: 50%;
             float: left;
+            @include sp {
+              width: 72%;
+            }
           }
           .container3-text {
             width: 100%;
@@ -406,9 +422,8 @@ html {
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     display: flex;
     aspect-ratio: 1920/140;
-    min-width: 460px;
     @include sp {
-      aspect-ratio: 1920/550;
+      aspect-ratio: 1920/700;
     }
     .left_container {
       width: 12%;
@@ -422,7 +437,7 @@ html {
         line-height: 6rem;
         @include sp {
           aspect-ratio: 230.39/240;
-          line-height: 20rem;
+          line-height: 22rem;
         }
 
         .logo_image {
@@ -498,7 +513,6 @@ html {
     text-align: center;
     background-color: $sub_color3;
     color: $font_color2;
-    min-width: 460px;
   }
 }
 
