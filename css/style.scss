@@ -421,9 +421,11 @@ html {
     width: 100%;
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
     display: flex;
-    aspect-ratio: 1920/140;
+    // aspect-ratio: 1920/140;
     @include sp {
-      aspect-ratio: 1920/700;
+      // aspect-ratio: 1920/700;
+      vertical-align: middle;
+
     }
     .left_container {
       width: 12%;
@@ -431,18 +433,23 @@ html {
         width: 24%;
       }
       .left_box {
-        width: 100%;
+        width: calc(100% - 1rem);
+        height: 100%;
         padding-left: 1rem;
-        aspect-ratio: 230.39/140;
-        line-height: 6rem;
+        // aspect-ratio: 230.39/140;
+        // line-height: 6rem;
         @include sp {
-          aspect-ratio: 230.39/240;
-          line-height: 22rem;
+          // aspect-ratio: 230.39/240;
+          // line-height: 100%;
         }
 
         .logo_image {
           width: 100%;
           aspect-ratio: 200/70;
+          padding-top: 1.5rem ;
+          @include sp {
+            padding-top: 11rem;
+          }
         }
       }
     }
@@ -453,19 +460,14 @@ html {
       }
       .right_box {
         width: 100%;
-        aspect-ratio: 1689.59/140;
-        @include sp {
-          aspect-ratio: 1689.59/550;
-        }
         .menu {
-          height: 100%;
           width: auto;
           ul {
             width: 81%;
             margin: 0 auto;
             @include sp {
               width: 66%;
-              margin: 2rem 0 0 0;
+              margin: 2rem 0 2rem 0;
             }
             li {
               display: inline-block;

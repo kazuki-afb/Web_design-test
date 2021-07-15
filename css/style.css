@@ -573,12 +573,11 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  aspect-ratio: 1920/140;
 }
 
 @media only screen and (max-width: 896px) {
   .body .footer {
-    aspect-ratio: 1920/700;
+    vertical-align: middle;
   }
 }
 
@@ -593,22 +592,21 @@ html {
 }
 
 .body .footer .left_container .left_box {
-  width: 100%;
+  width: calc(100% - 1rem);
+  height: 100%;
   padding-left: 1rem;
-  aspect-ratio: 230.39/140;
-  line-height: 6rem;
-}
-
-@media only screen and (max-width: 896px) {
-  .body .footer .left_container .left_box {
-    aspect-ratio: 230.39/240;
-    line-height: 22rem;
-  }
 }
 
 .body .footer .left_container .left_box .logo_image {
   width: 100%;
   aspect-ratio: 200/70;
+  padding-top: 1.5rem;
+}
+
+@media only screen and (max-width: 896px) {
+  .body .footer .left_container .left_box .logo_image {
+    padding-top: 11rem;
+  }
 }
 
 .body .footer .right_container {
@@ -623,17 +621,9 @@ html {
 
 .body .footer .right_container .right_box {
   width: 100%;
-  aspect-ratio: 1689.59/140;
-}
-
-@media only screen and (max-width: 896px) {
-  .body .footer .right_container .right_box {
-    aspect-ratio: 1689.59/550;
-  }
 }
 
 .body .footer .right_container .right_box .menu {
-  height: 100%;
   width: auto;
 }
 
@@ -645,7 +635,7 @@ html {
 @media only screen and (max-width: 896px) {
   .body .footer .right_container .right_box .menu ul {
     width: 66%;
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 2rem 0;
   }
 }
 
