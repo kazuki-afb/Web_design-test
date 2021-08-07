@@ -45,7 +45,7 @@ html {
           padding-left: 1rem;
           .logo_image {
             width: 100%;
-            line-height: 4rem;
+            line-height: 8rem;
             aspect-ratio: 200/70;
             @include sp {
               line-height: 8rem;
@@ -60,9 +60,10 @@ html {
           aspect-ratio: 1689.59/73.64;
           display: flex;
           justify-content: space-between;
+          align-items: center;
+
           .catchcopy {
             font-size: 1rem;
-            line-height: 4rem;
             padding-left: 10px;
             @include sp {
               font-size: 2rem;
@@ -148,7 +149,7 @@ html {
           font-weight: bold;
           font-size: 2rem;
         }
-        .container1 {
+        .container_pick_up {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
@@ -158,7 +159,7 @@ html {
           @include sp {
             flex-direction: column;
           }
-          .container1_box {
+          .container_pick_up_box {
             width: 80%;
             margin-top: $text_padding;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
@@ -168,11 +169,11 @@ html {
               margin-top: $text_padding;
               max-width: 896px;
             }
-            .container1_img {
+            .container_pick_up_img {
               width: 100%;
               aspect-ratio: 4/3;
             }
-            .container1_text {
+            .container_pick_up_text {
               padding: $text_padding;
               font-size: 0.9rem;
               @include sp {
@@ -181,15 +182,15 @@ html {
             }
           }
         }
-        .container2 {
+        .container_living {
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
-          .container2_box1 {
+          .container_living_box1 {
             display: flex;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
 
-            .container2_box1-img {
+            .container_living_box1-img {
               width: calc(40% - 5px);
               @include sp {
                 width: calc(60% - 5px);
@@ -197,7 +198,7 @@ html {
                 padding-top: $text_padding;
               }
             }
-            .container2_box1-text {
+            .container_living_box1-text {
               width: 60%;
               padding: $text_padding;
               @include sp {
@@ -206,7 +207,7 @@ html {
               }
             }
           }
-          .container2_box2 {
+          .container_living_box2 {
             display: flex;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
 
@@ -214,7 +215,7 @@ html {
               flex-direction: column-reverse;
 
             }
-            .container2_box2-text {
+            .container_living_box2-text {
               width: 60%;
               padding: $text_padding;
               @include sp {
@@ -222,7 +223,7 @@ html {
                 font-size: 1.5rem;
               }
             }
-            .container2_box2-movie{
+            .container_living_box2-movie{
               width: 40%;
               @include sp {
                 width: calc(100% - 10px);
@@ -246,18 +247,18 @@ html {
             }
           }
         }
-        .container3 {
+        .container_concept {
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
-          .container3-img {
+          .container_concept-img {
             width: 50%;
             float: left;
             @include sp {
               width: 72%;
             }
           }
-          .container3-text {
+          .container_concept-text {
             width: 100%;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             @include sp {
@@ -265,14 +266,14 @@ html {
             }
           }
         }
-        .container4 {
+        .container_news {
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
-          .container4_box {
+          .container_news_box {
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             padding: 2rem 0;
-            .container4_box-li{
+            .container_news_box-li{
             display: flex;
             justify-content: center;
               .dating {
@@ -295,7 +296,7 @@ html {
             }
           }
         }
-        .container5 {
+        .container_company {
           display: flex;
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
@@ -303,7 +304,7 @@ html {
           @include sp {
             flex-direction: column-reverse;
           }
-          .container5-text {
+          .container_company-text {
             width: 50%;
             background-color: rgba($color: $sub_color, $alpha: 0.7) ;
             padding: 4rem 0;
@@ -362,7 +363,7 @@ html {
               }
             }
           }
-          .container5-map {
+          .container_company-map {
             width: 50%;
             @include sp {
               width: 100%;
@@ -370,26 +371,14 @@ html {
             }
           }
         }
-        .container6_header {
-          padding: 10px 0;
-          background-color: rgba($color: $main_color, $alpha: 0.6) ;
-          text-align: center;
-          border-radius : $border-radius_top;
-          color: $font_color2;
-          font-weight: bold;
-          font-size: 2rem;
-          @include sp{
-            display: none;
-          }
-        }
-        .container6 {
+        .container_contact {
           padding: $container_padding;
           background-color: rgba($color: $sub_color, $alpha: 0.4) ;
           border-radius: $border-radius_bottom;
-          @include sp {
-            display: none;
-          }
-          .container6_box {
+          // @include sp {
+          //   display: none;
+          // }
+          .container_contact_box {
             display: flex;
             justify-content: center;
             text-align: end;
@@ -418,6 +407,12 @@ html {
       }
     }
   }
+  .minscreen_display_none {
+    @include sp{
+      display: none;
+    }
+  }
+
   .footer {
     width: 100%;
     background-color: rgba($color: $main_color, $alpha: 0.6) ;
